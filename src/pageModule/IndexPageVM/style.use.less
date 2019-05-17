@@ -1,0 +1,225 @@
+@import (reference) '~common/style/global.less';
+
+.index-page-container {
+  .erp-tabs-panes-container {
+    padding: 5px 0 !important;
+    .erp-tabs-pane {
+      padding: 0 !important;
+    }
+    .tab-title {
+      height: 60px;
+      line-height: 60px;
+      padding: 0 20px;
+      color: #383838;
+      &:hover {
+        background: rgb(244, 249, 255);
+        .tab-title-title, a {
+          color: rgb(97, 152, 244);
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+      &-index {
+        //background: green;
+        display: inline-block;
+        width: 30px;
+      }
+      &-title {
+        display: inline-block;
+        width: 680px;
+      }
+      &-time {
+        display: inline-block;
+        width: 160px;
+      }
+      &-operate {
+        display: inline-block;
+        float: right;
+        margin-right: 60px;
+        a {
+          display: inline-block;
+          color: #3999f7;
+          padding-left: 40px;
+          text-align: center;
+        }
+      }
+    }
+
+    .tab-footer-more {
+      height: 40px;
+      line-height: 40px;
+      a {
+        color: #3999f7;
+        padding: 0 20px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .index-tab-reset {
+    //min-height: 380px;
+    width: 1200px;
+    margin: auto;
+    .erp-table-thead {
+      display: none;
+    }
+    td {
+      border: 0 !important;
+    }
+    .erp-table {
+      border-bottom: 0;
+      table tbody td {
+        height: 60px;
+      }
+    }
+    .erp-table-no-data-body{
+      top: 0!important;
+    }
+    .erp-table-body-wrap {
+      max-height: inherit !important;
+    }
+    .erp-table-with-fixed-head .erp-table-head-wrap-outer + .erp-table-body-wrap {
+      border-top: 0 solid #e6e6e6;
+      margin-top: 4px;
+      overflow-y: inherit !important;
+    }
+    .erp-tabs-wrap {
+      width: 100%;
+      height: 58px !important;
+      .erp-tabs-wrap-inner {
+        width: 100%;
+        text-align: center;
+        background: white;
+        height: 58px !important;
+      }
+    }
+
+    .erp-tabs.erp-tabs-type-card {
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(57, 153, 247, 0.2);
+      margin-bottom: 50px;
+      margin-top: 40px;
+      .erp-tabs-container {
+        border: 0;
+        .erp-tabs-tab {
+          border-bottom: 4px solid transparent;
+          border-top-color: transparent;
+          border-top: 0;
+          height: 58px;
+          line-height: 48px;
+          margin: 0 50px;
+        }
+        .erp-tabs-tab.erp-tabs-tab-active {
+          a {
+            color: #3999f7;
+          }
+        }
+        .erp-tabs-tab-active {
+          border-bottom-color: #3999f7;
+          color: #3999f7;
+        }
+        .erp-tabs-tab-inner {
+          border: 0;
+          height: 68px;
+          padding-top: 10px;
+          .tab-span {
+            color: #3999f7;
+          }
+        }
+        .erp-tabs-extra-wrap {
+          border: 0;
+          height: 58px;
+          box-shadow: 0 4px 10px rgba(57, 153, 247, 0.2);
+        }
+      }
+      .erp-tabs-panes-container {
+        border: 0;
+      }
+    }
+  }
+
+  .erp-page-container-content {
+    background: transparent;
+  }
+
+
+  .index-icon-box{
+    margin: 0 auto!important;
+    width: 1200px!important;
+  }
+  .col-inner.text-center {
+    text-align: center;
+    margin-bottom: 40px;
+    .index-img-box {
+      position: relative;
+      display: inline-block;
+      width: 82px;
+      height: 82px;
+      &:hover {
+        color: #6198f4;
+        position: relative;
+      }
+      & img {
+        position: relative;
+        top: 26px;
+        left: 4px;
+        width: 82px;
+        height: 82px;
+        margin-bottom: 50px;
+        transform: scale(.7);
+        transition: transform .3s linear;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        background: url("./images/icon-index-00.png") no-repeat center center;
+        background-size: 100%;
+        position: absolute;
+        top: 22px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: transform .3s ease-in;
+      }
+      &:hover:before {
+        transform: scale(1.2) rotateZ(360deg);
+      }
+      &:hover:after {
+        content: '';
+        display: inline-block;
+        border: 6px solid transparent;
+        border-top: 10px solid rgb(45, 131, 245);
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -6px;
+        left: 8px;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+  .erp-table .erp-table-cell-type-actions .erp-btn.erp-btn-size-small.erp-btn-link{
+    max-width: inherit;
+  }
+}
+
+.erp-page-container-body-container {
+  max-width: 100%;
+}
+
+.erp-page-container-header-container {
+  border-bottom: solid 1px #ffffff30;
+}
+
+.erp-page-container-header-container {
+  height: 54px;
+  min-width: 1060px;
+  .erp-header-inner {
+    background: none;
+  }
+}

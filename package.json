@@ -1,0 +1,86 @@
+{
+  "name": "seeds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
+    "mock": "nodemon ./mock/server/nodemon.js",
+    "dev": "webpack-dev-server --inline --profile --hot --mode development --progress --open --config config/webpack.dev.js --env.API=dev",
+    "build": "webpack --progress --config config/webpack.prod.js",
+    "start": "webpack-dev-server --hot --mode development"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "autoprefixer": "^9.3.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.5.0",
+    "eslint-config-ali": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.1.0",
+    "husky": "^1.0.0-rc.14",
+    "json-loader": "^0.5.7",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^7.2.2",
+    "postcss-less": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "react-css-modules": "^4.7.7",
+    "react-hot-loader": "^4.3.8",
+    "script-ext-html-webpack-plugin": "^2.1.2",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.1.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.4"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "ant-design-pro": "^2.3.2",
+    "antd": "^3.17.0",
+    "axios": "^0.18.0",
+    "colors": "^1.3.3",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "mobx": "^5.1.0",
+    "mobx-react": "^5.2.8",
+    "mock": "^0.1.1",
+    "mockjs": "^1.0.1-beta3",
+    "nodemon": "^1.19.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.2.0",
+    "react-highcharts": "^16.0.2",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^4.3.1",
+    "shortid": "^2.2.13",
+    "superagent": "^5.0.5",
+    "superagent-bluebird-promise": "^4.2.0",
+    "superagent-no-cache": "^0.1.1",
+    "webpack": "^4.31.0"
+  }
+}
